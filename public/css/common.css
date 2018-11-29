@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  background: grey;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+.head .logo {
+  font-size: 26px;
+  text-decoration: none;
+}
+.head .right {
+  display: flex;
+  align-items: center;
+}
+
+.foot {
+  height: 50px;
+  border-top: 1px solid #000;
+}
+
+.menu {
+  width: 250px;
+  height: 100%;
+  border-right: 1px solid black;
+  overflow-y: auto;
+}
+.menu li {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  background: white;
+}
+.main .body {
+  flex: 1;
+  padding: 0 20px;
+}
+.main .search-bar {
+  margin: 20px 0 10px 0;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: royalblue;
+}
+
+.pagination {
+  float: right;
+}
+
+/*# sourceMappingURL=common.css.map */

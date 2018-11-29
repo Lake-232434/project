@@ -38,6 +38,11 @@ body-parser@1.18.3:
     raw-body "2.3.3"
     type-is "~1.6.16"
 
+bson@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/bson/download/bson-1.1.0.tgz#bee57d1fb6a87713471af4e32bcae36de814b5b0"
+  integrity sha1-vuV9H7aodxNHGvTjK8rjbegUtbA=
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/bytes/download/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -204,6 +209,11 @@ media-typer@0.3.0:
   resolved "http://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+memory-pager@^1.0.2:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/memory-pager/download/memory-pager-1.1.0.tgz#9308915e0e972849fefbae6f8bc95d6b350e7344"
+  integrity sha1-kwiRXg6XKEn++65vi8ldazUOc0Q=
+
 merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/merge-descriptors/download/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
@@ -230,6 +240,25 @@ mime@1.4.1:
   version "1.4.1"
   resolved "http://registry.npm.taobao.org/mime/download/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
   integrity sha1-Eh+evEnjdm8xGnbh+hyAA8SwOqY=
+
+mongodb-core@3.1.9:
+  version "3.1.9"
+  resolved "http://registry.npm.taobao.org/mongodb-core/download/mongodb-core-3.1.9.tgz#c31ee407bf932b0149eaed775c17ee09974e4ca3"
+  integrity sha1-wx7kB7+TKwFJ6u13XBfuCZdOTKM=
+  dependencies:
+    bson "^1.1.0"
+    require_optional "^1.0.1"
+    safe-buffer "^5.1.2"
+  optionalDependencies:
+    saslprep "^1.0.0"
+
+mongodb@^3.1.10:
+  version "3.1.10"
+  resolved "http://registry.npm.taobao.org/mongodb/download/mongodb-3.1.10.tgz#45ad9b74ea376f4122d0881b75e5489b9e504ed7"
+  integrity sha1-Ra2bdOo3b0Ei0IgbdeVIm55QTtc=
+  dependencies:
+    mongodb-core "3.1.9"
+    safe-buffer "^5.1.2"
 
 morgan@~1.9.0:
   version "1.9.1"
@@ -302,7 +331,20 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-safe-buffer@5.1.2:
+require_optional@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/require_optional/download/require_optional-1.0.1.tgz#4cf35a4247f64ca3df8c2ef208cc494b1ca8fc2e"
+  integrity sha1-TPNaQkf2TKPfjC7yCMxJSxyo/C4=
+  dependencies:
+    resolve-from "^2.0.0"
+    semver "^5.1.0"
+
+resolve-from@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/resolve-from/download/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
+  integrity sha1-lICrIOlP+h2egKgEx+oUdhGWa1c=
+
+safe-buffer@5.1.2, safe-buffer@^5.1.2:
   version "5.1.2"
   resolved "http://registry.npm.taobao.org/safe-buffer/download/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
@@ -311,6 +353,18 @@ safe-buffer@5.1.2:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
+
+saslprep@^1.0.0:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/saslprep/download/saslprep-1.0.2.tgz#da5ab936e6ea0bbae911ffec77534be370c9f52d"
+  integrity sha1-2lq5NubqC7rpEf/sd1NL43DJ9S0=
+  dependencies:
+    sparse-bitfield "^3.0.3"
+
+semver@^5.1.0:
+  version "5.6.0"
+  resolved "http://registry.npm.taobao.org/semver/download/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
+  integrity sha1-fnQlb7qknHWqfHogXMInmcrIAAQ=
 
 send@0.16.2:
   version "0.16.2"
@@ -345,6 +399,13 @@ setprototypeof@1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/setprototypeof/download/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
   integrity sha1-0L2FU2iHtv58DYGMuWLZ2RxU5lY=
+
+sparse-bitfield@^3.0.3:
+  version "3.0.3"
+  resolved "http://registry.npm.taobao.org/sparse-bitfield/download/sparse-bitfield-3.0.3.tgz#ff4ae6e68656056ba4b3e792ab3334d38273ca11"
+  integrity sha1-/0rm5oZWBWuks+eSqzM004JzyhE=
+  dependencies:
+    memory-pager "^1.0.2"
 
 "statuses@>= 1.4.0 < 2":
   version "1.5.0"
