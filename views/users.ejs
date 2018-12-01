@@ -35,45 +35,58 @@
                   <th>年龄</th>
                   <th>性别</th>
                   <th>是否管理员</th>
+                  <th>操作</th>
                 </tr>
               </thead>
               <tbody>
                 <% for(var i = 0; i < list.length; i++) {%>
                   <tr>
-                      <th scope="row"><%= i+1 %></th>
-                      <td><%= list[i].username %></td>
-                      <td><%= list[i].nickname %></td>
-                      <td><%= list[i].age %></td>
-                      <td><%= list[i].sex %></td>
-                      <td><%= list[i].isAdmin %></td>
-                    </tr>
-                <%} %>
-                  </tbody>
+                    <th scope="row">
+                      <%= i+1 %>
+                    </th>
+                    <td>
+                      <%= list[i].username %>
+                    </td>
+                    <td>
+                      <%= list[i].nickname %>
+                    </td>
+                    <td>
+                      <%= list[i].age %>
+                    </td>
+                    <td>
+                      <%= list[i].sex %>
+                    </td>
+                    <td>
+                      <%= list[i].isAdmin %>
+                    </td>
+                    <td>
+                      <% if (!list[i].isAdmin) {%>
+                        <a href="/users/delete?id=<%= list[i]._id %>">删除</a>
+                        <%}%>
+
+                    </td>
+                  </tr>
+                  <%} %>
+              </tbody>
             </table>
+
             <nav>
               <ul class="pagination">
                 <li>
-                  <a href="#" aria-label="Previous">
+                  <a href="/users?page=<%= currentPage - 1 < 1 ? 1: currentPage - 1 %>&pageSize=<%= pageSize %>" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
-                <li class="active">
-                  <a href="#">1</a>
+                <!-- <% for(var i=0; i < totalPage; i++) {%> -->
+                <li class="<%= currentPage === (i+1) ? 'active': '' %>">
+                  <a href="/users?page=<%= i+1 %>&pageSize=<%= pageSize %>">
+                    <%= i + 1%>
+                  </a>
                 </li>
+                <!-- <%}%> -->
+
                 <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#">4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#" aria-label="Next">
+                  <a href="/users?page=<%= currentPage + 1>totalPage ? totalPage : currentPage + 1 %>&pageSize=<%= pageSize %>" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                   </a>
                 </li>

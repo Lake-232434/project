@@ -1,0 +1,17 @@
+form {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+form .man, form .woman, form .yes, form .no {
+  margin-left: 50px;
+}
+form .btn {
+  margin-left: 120px;
+}
+form a {
+  margin-left: 50px;
+}
+
+/*# sourceMappingURL=register.css.map */

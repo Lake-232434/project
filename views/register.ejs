@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>后台管理系统</title>
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+   <div class="container">
+      <form action="/users/register" method="POST">
+          <div class="form-group">
+            <label for="exampleInputname">用户名：</label>
+            <input type="text" name="name" class="form-control" id="exampleInputname" placeholder="请输入用户名">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">密码：</label>
+            <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" placeholder="请输入密码">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputnickname">昵称：</label>
+              <input type="text" name="nickname" class="form-control" id="exampleInputnickname" placeholder="请输入昵称">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputage">年龄：</label>
+                <input type="text" name="age" class="form-control" id="exampleInputage" placeholder="请输入年龄">
+              </div>
+            <div class="form-group">
+          <label for="exampleInputsex">性别：</label>
+          <div>
+              <input type="radio" class="man" name="sex" value="男">:男<br>
+              <input type="radio" class="woman" name="sex" value="女">:女
+          </div>
+            
+            </div>
+            <div class="form-group">
+            <label for="exampleInputisAdmin">管理员：</label>
+            <div>
+                <input type="radio" class="yes" name="isAdmin" value="是">:是<br>
+                <input type="radio" class="no" name="isAdmin" value="否">:否
+            </div>  
+          </div>
+          <button type="submit" class="btn btn-default">注册</button>
+          <a href="/login.html">已有账号，返回登录</a>
+        </form>
+        
+      <!-- <form action="/users/register" method="POST">
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+          </div>
+          <label for="">
+              <span>用户名：</span>
+              <input type="text" name="name" placeholder="请输入用户名">
+          </label>
+          <label for="">
+              <span>密码：</span>
+              <input type="password" name="pwd" placeholder="请输入密码">
+          </label>
+          <label for="">
+            <span>昵称：</span>
+            <input type="text" name="nickname" placeholder="请输入昵称">
+        </label>
+          <label for="">
+            <span>年龄：</span>
+            <input type="text" name="age" placeholder="请输入年龄">
+          </label>
+          <label for="">
+            <span>性别：</span>
+            <input type="radio" name="sex" value="男">男
+            <input type="radio" name="sex" value="女">女
+         </label>
+         <label for="">
+            <span>管理员：</span>
+            <input type="radio" name="inAdmin" value="是">是
+            <input type="radio" name="inAdmin" value="否">否
+         </label>
+
+          <input type="submit" value="注册">
+          <a href="/login.html">已有账号，返回登录</a>
+      </form>  -->
+   </div>
+</body>
+</html>

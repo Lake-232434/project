@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function(req,res,next){
   if(ignoreRouter.indexOf(req.url) > -1){
     next();
+    return;
   }
 
   var nickname=req.cookies.nickname;
